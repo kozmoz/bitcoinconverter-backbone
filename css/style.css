@@ -1,0 +1,92 @@
+.ng-cloak {
+    display: none !important;
+}
+
+.help-inline, .help-block {
+    font-size: 13px;
+    line-height: 18px;
+    color: #818177;
+}
+
+.form-horizontal input+.help-block, .form-horizontal input+.help-inline, .form-horizontal .input-prepend+.help-block {
+    margin-top: 4px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+    color: #666;
+}
+
+label.radio, label.checkbox {
+    color: #333;
+}
+
+label, input, button, select, textarea {
+    font-size: 16px;
+}
+
+.converter-block {
+    position: relative;
+    border: 1px solid #cdcdd1;
+    margin-top: 10px;
+    background-color: #e4e4e8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+.converter-block-title {
+    color: white;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #184791; /* Old browsers */
+    background: -moz-linear-gradient(top,  #184791 0%, #00256f 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#184791), color-stop(100%,#00256f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #184791 0%,#00256f 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #184791 0%,#00256f 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #184791 0%,#00256f 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #184791 0%,#00256f 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#184791', endColorstr='#00256f',GradientType=0 ); /* IE6-9 */
+}
+
+.converter-block-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+}
+
+.converter-block-result {
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: white;
+    border: 3px solid #00256f;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.converter-block-result-exchangerate {
+    margin-bottom: 10px;
+}
+
+/* general class to hide elements. */
+.hidden {
+    display: none !important;
+ }
