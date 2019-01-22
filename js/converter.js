@@ -68,8 +68,8 @@ app.AppView = Backbone.View.extend({
      */
     _updateEurExchange: function () {
         var eurExchangeModel = this.model.get('eurExchange');
-        var now = eurExchangeModel.get('data').now;
-        var value = eurExchangeModel.get('data').buy.value;
+        var now = new Date(eurExchangeModel.get('time').updatedISO);
+        var value = eurExchangeModel.get('bpi').EUR.rate_float;
 
         if (now && value) {
             var date = new Date(now / 1000);
@@ -89,8 +89,8 @@ app.AppView = Backbone.View.extend({
      */
     _updateUsdExchange: function () {
         var usdExchangeModel = this.model.get('usdExchange');
-        var now = usdExchangeModel.get('data').now;
-        var value = usdExchangeModel.get('data').buy.value;
+        var now = new Date(usdExchangeModel.get('time').updatedISO);
+        var value = usdExchangeModel.get('bpi').USD.rate_float;
 
         if (now && value) {
             var date = new Date(now / 1000);
@@ -239,12 +239,12 @@ app.ConvertToBtcLabelView = Backbone.View.extend({
 
 app.converterModel = new app.ConverterStateModel({
     'eurExchange': new (Backbone.Model.extend({
-        url: 'https://data.mtgox.com/api/2/BTCEUR/money/ticker',
-        defaults: { data: { buy: {value: 0}} }
+        url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
+        defaults: { bpi: { EUR: {rate_float: 0}} }
     })),
     'usdExchange': new (Backbone.Model.extend({
-        url: 'https://data.mtgox.com/api/2/BTCUSD/money/ticker',
-        defaults: { data: { buy: {value: 0}} }
+        url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
+        defaults: { bpi: { USD: {rate_float: 0}} }
     }))
 });
 
